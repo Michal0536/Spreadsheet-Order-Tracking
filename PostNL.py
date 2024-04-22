@@ -1,11 +1,9 @@
 import requests
 import random
-# from BasicVersionDoOddania.utils import get_proxy
-
 
 def PostNL_tracking(tracking):
     try:
-        staszek_post_code = '1323SG'
+        post_code = '1323SG'
 
 
         headers = {
@@ -13,7 +11,7 @@ def PostNL_tracking(tracking):
             'accept': 'application/json, text/plain, */*',
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
             'dnt': '1',
-            'referer': f'https://jouw.postnl.nl/track-and-trace/{tracking}-NL-{staszek_post_code}',
+            'referer': f'https://jouw.postnl.nl/track-and-trace/{tracking}-NL-{post_code}',
             'sec-ch-ua': '"Not-A.Brand";v="99", "Opera";v="91", "Chromium";v="105"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
@@ -27,7 +25,7 @@ def PostNL_tracking(tracking):
             'language': 'en',
         }
 
-        response = requests.get(f'https://jouw.postnl.nl/track-and-trace/api/trackAndTrace/{tracking}-NL-{staszek_post_code}', params=params, headers=headers)
+        response = requests.get(f'https://jouw.postnl.nl/track-and-trace/api/trackAndTrace/{tracking}-NL-{post_code}', params=params, headers=headers)
         if response.status_code != 200:
             raise Exception
         else:
@@ -47,5 +45,3 @@ def PostNL_tracking(tracking):
     except Exception as ER:
         print(ER)
         pass
-
-# print(PostNL_tracking('3STBKH562903808'))

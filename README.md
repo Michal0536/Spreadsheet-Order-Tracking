@@ -1,4 +1,4 @@
-# Project Title: Spreadsheet Order Tracking
+# Spreadsheet Order Tracking
 
 ## Introduction
 This project is designed to track order statuses by interfacing with Google Sheets and Gmail to update and monitor shipping information. It utilizes Google APIs to fetch and update spreadsheets based on emails received concerning order shipments. Additionally, it logs actions and stores order statuses locally in a JSON format for reference.
@@ -10,7 +10,7 @@ This project is designed to track order statuses by interfacing with Google Shee
 - Periodic checks and updates with multi-threading support.
 
 ## Prerequisites
-- Python 3.6+
+- Python 3.10
 - Google API credentials for Sheets and Gmail
 - `google-auth`, `google-auth-oauthlib`, `google-api-python-client`, `colorama` Python packages
 
