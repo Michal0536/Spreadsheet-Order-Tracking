@@ -1,7 +1,3 @@
-Here's an example of a README file for your project. This document includes the introduction to the project, instructions for setting up, using, and a brief description of each major function provided by the code.
-
----
-
 # Project Title: Spreadsheet Order Tracking
 
 ## Introduction
